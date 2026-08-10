@@ -1,0 +1,43 @@
+
+#callbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+#callbackForm input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;          /* same size for all */
+  font-weight: 600;         /* consistent thickness */
+  background-color: #8A6E5A;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  line-height: 1.2;
+}
+.btn:hover {
+  background-color: #6f5647;
+}
+#scheduleSection, #callbackSection #visitSection {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+input {
+  margin: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
