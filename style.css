@@ -335,3 +335,7 @@ input {
 .join-btn:hover {
   background-color: #5538d0;
 }
+.logo img {
+  width: 45px;   /* Adjust this value to fit your header */
+  height: auto;  /* Keeps proportions correct */
+}
