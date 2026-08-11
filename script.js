@@ -89,3 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function setPrivacy(choice) {
+  document.getElementById('privacyBanner').style.display = 'none';
+  localStorage.setItem('privacyChoice', choice);
+}
+
+window.onload = function() {
+  if (!localStorage.getItem('privacyChoice')) {
+    document.getElementById('privacyBanner').style.display = 'block';
+  }
+};

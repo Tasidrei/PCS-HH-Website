@@ -30,15 +30,27 @@
 </head>
 <body>
 
-<header>
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<header class="main-header">
+  <div class="logo">
+    <img src="images/pet-icon.png" alt="Cat and Dog Icon">
+    <h1>TrustedPetSitter</h1>
+  </div>
 
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth-buttons">
+    <a href="login.html" class="login-link">Log in</a>
+    <a href="join.html" class="join-btn">Join Now</a>
+  </div>
 </header>
+
 
 <section class="hero">
   <h1>Professional Cat Sitting in Hamburg</h1>
@@ -79,7 +91,7 @@
 
   
 <section class="section">
-  <h2>Our Services</h2>
+  <h2>My Services</h2>
   <div class="services">
     <div class="card">
       <h3>Daily Visits</h3>
@@ -105,6 +117,25 @@
   </iframe>
 </section>
 <script src="./script.js"></script>
-  
+ 
+<div class="privacy-banner" id="privacyBanner">
+  <h3>Your Privacy Choices</h3>
+  <p>
+    We use cookies and similar technologies to provide a personalized experience,
+    improve our services, and analyze site usage. To learn more, review our
+    <a href="privacy.html" target="_blank">Privacy Policy</a>.
+  </p>
+  <div class="privacy-buttons">
+    <button onclick="setPrivacy('preferences')">Preferences</button>
+    <button onclick="setPrivacy('reject')">Reject All</button>
+    <button class="allow" onclick="setPrivacy('allow')">Allow All</button>
+  </div>
+</div>
+<footer class="site-footer">
+  <p>© 2026 PCS‑HH. All rights reserved.</p>
+  <a href="terms.html">Terms of Service</a> |
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
 </body>
 </html>
