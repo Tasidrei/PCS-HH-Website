@@ -2,119 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact – PCS-HH</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Contact – TrustedPetSitter</title>
+  <link href="https://googleapis.com" rel="stylesheet">
+
   <style>
+    /* --- Base Layout Styles --- */
+    body { margin: 0; font-family: Lato, sans-serif; background: #F7F3EE; color: #333; }
+    
+    /* --- Master Header Layout System --- */
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    /* --- Paste this inside the <style> tags of about, services, and contact html --- */
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding: 15px 40px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
 
-.logo img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
+    .logo h1 {
+      font-family: Montserrat, sans-serif;
+      font-size: 22px;
+      color: #2b2b2b;
+      font-weight: 700;
+      margin: 0;
+    }
 
-.logo h1 {
-  font-family: Montserrat, sans-serif;
-  font-size: 22px;
-  color: #2b2b2b;
-  font-weight: 700;
-  margin: 0;
-}
+    .main-nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-.main-nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    .main-nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+      transition: color 0.3s ease;
+    }
 
-.main-nav a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  transition: color 0.3s ease;
-}
+    .main-nav a:hover {
+      color: #c49a6c;
+    }
 
-.main-nav a:hover {
-  color: #c49a6c;
-}
+    .auth-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-.auth-buttons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    .login-link {
+      color: #6a4efc;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.login-link {
-  color: #6a4efc;
-  text-decoration: none;
-  font-weight: 500;
-}
+    .join-btn {
+      background-color: #6a4efc;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-.join-btn {
-  background-color: #6a4efc;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-}
+    /* --- Contact Page Styles --- */
+    .contact-section {
+      padding: 8px 40px;
+      max-width: 800px;
+      margin: 50px auto;
+    }
 
+    .contact-section h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+    }
+
+    .contact-list li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .contact-list strong {
+      color: #8A6E5A;
+      min-width: 100px;
+    }
+
+    .contact-list a {
+      color: #6a4efc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Footer Styles --- */
+    .site-footer {
+      background: #F0eae1;
+      padding: 30px 40px;
+      text-align: right;
+      border-top: 1px solid #e2dbd0;
+      margin-top: 100px;
+    }
+
+    .site-footer p { margin: 0 0 10px 0; color: #555; }
+    .site-footer a { color: #777; text-decoration: none; margin-left: 10px; }
   </style>
 </head>
-
 <body>
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-<section class="section">
-  <h1>Contact</h1>
+  <!-- Complete Standardized Header -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="images/Cat_Dog.png" alt="Cat and Dog Icon">
+      <h1>TrustedPetSitter</h1>
+    </div>
 
-  <p>Ready to book or have questions? I’d love to hear from you!</p>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-  <ul>
-    <li>Email: <a href="ha.bruns30@gmail.com">ha.bruns30@gmail.com</a></li>
-    <li>Phone: <a href="tel:+491752215838">+491752215838</a></li>
-    <!--li>Instagram: <a href="#">@pcs_hamburg</a></li--> 
-    <li>WhatsApp: <a href="https://wa.me/491234567890" target="_blank">Chat on WhatsApp</a></li>
-  </ul>
-</section>
+    <div class="auth-buttons">
+      <a href="login.html" class="login-link">Log in</a>
+      <a href="join.html" class="join-btn">Join Now</a>
+    </div>
+  </header>
 
-<!-- Replace your old script tag with this precise GitHub Pages path -->
-<script src="https://github.io"></script>
+  <!-- Cleaned Contact Body Content Area -->
+  <main class="contact-section">
+    <h2>Contact</h2>
+    <p class="contact-subtitle">Ready to book or have questions? I'd love to hear from you!</p>
+    
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:ha.bruns30@gmail.com">ha.bruns30@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+491752215838">+49 175 2215838</a></li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me" target="_blank">Chat on WhatsApp</a></li>
+    </ul>
+  </main>
 
+  <!-- Cleaned Footer Frame Structure -->
+  <footer class="site-footer">
+    <p>© 2026 PCS-HH. All rights reserved.</p>
+    <a href="terms.html">Terms of Service</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </footer>
 
-<footer class="site-footer">
-  <p>© 2026 PCS‑HH. All rights reserved.</p>
-  <a href="terms.html">Terms of Service</a> |
-  <a href="privacy.html">Privacy Policy</a>
-</footer>
+  <!-- Live Shared Script System Link Tracking Pipeline -->
+  <script src="https://github.io"></script>
 
 </body>
 </html>
