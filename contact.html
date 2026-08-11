@@ -169,31 +169,70 @@
 
   <!-- Cleaned Contact Body Content Area -->
  
-  <main class="contact-section">
+ <main class="contact-section">
   <h2>Contact</h2>
   <p class="contact-subtitle">Ready to book or have questions? Send a message directly below!</p>
   
-  <!-- Modern Interactive Contact Form -->
+  <!-- Premium Form Container Card -->
   <form id="contactForm" class="styled-contact-form">
+    <!-- Row 1: First Name & Last Name -->
     <div class="form-row">
       <div class="form-field">
-        <label for="contactName">Your Name</label>
-        <input type="text" id="contactName" name="user_name" placeholder="John Doe" required>
+        <input type="text" id="contactFirstName" placeholder="First name*" required>
       </div>
       <div class="form-field">
-        <label for="contactEmail">Email Address</label>
-        <input type="email" id="contactEmail" name="user_email" placeholder="john@example.com" required>
+        <input type="text" id="contactLastName" placeholder="Last name*" required>
       </div>
     </div>
 
-    <div class="form-field">
-      <label for="contactMessage">Your Message</label>
-      <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your pet care needs..." required></textarea>
+    <!-- Row 2: Email Only -->
+    <div class="form-row">
+      <div class="form-field">
+        <input type="email" id="contactEmail" placeholder="Email*" required>
+      </div>
     </div>
 
-    <button type="submit" class="submit-form-btn">Send Message</button>
+    <!-- Row 3: Country & City Dropdowns -->
+    <div class="form-row">
+      <div class="form-field select-wrapper">
+        <select id="contactCountry" required>
+          <option value="" disabled selected>Country*</option>
+          <option value="Germany">Germany</option>
+          <option value="Austria">Austria</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-field select-wrapper">
+        <select id="contactCity" required>
+          <option value="" disabled selected>City*</option>
+          <option value="Hamburg">Hamburg</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Munich">Munich</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Row 4: Flexible Message Box with massive character limit -->
+    <div class="form-row">
+      <div class="form-field">
+        <textarea id="contactMessage" rows="5" maxlength="10000" placeholder="What is your community project and what does success look like to you?" required></textarea>
+      </div>
+    </div>
+
+    <!-- Privacy Disclaimer Row -->
+    <p class="form-privacy-text">
+      By submitting your information, you agree to TrustedPetSitter's <a href="privacy.html">Privacy Policy</a>. You can opt out anytime.
+    </p>
+
+    <!-- Centered Bright Red Submit Button -->
+    <div class="form-submit-container">
+      <button type="submit" class="submit-form-btn">Talk to us</button>
+    </div>
   </form>
 </main>
+
 
 
   <!-- Cleaned Footer Frame Structure -->
