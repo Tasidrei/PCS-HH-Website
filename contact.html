@@ -6,140 +6,165 @@
   <link href="https://googleapis.com" rel="stylesheet">
 
   <style>
-    /* --- Base Layout Styles --- */
-    body { margin: 0; font-family: Lato, sans-serif; background: #F7F3EE; color: #333; display: flex; flex-direction: column; min-height: 100vh;}
-    
-    /* --- Master Header Layout System --- */
-    .main-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 15px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+   
+    /* --- Base Layout Enforcements --- */
+body { 
+  margin: 0; 
+  font-family: Arial, sans-serif; 
+  background: #F7F3EE; 
+  color: #333; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+/* --- Keep Your Standard Master Header System --- */
+.main-header { display: flex !important; align-items: center; justify-content: space-between; background: #fff; padding: 15px 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { width: 40px; height: 40px; object-fit: contain; }
+.logo h1 { font-family: 'Montserrat', sans-serif; font-size: 22px; color: #2b2b2b; font-weight: 700; margin: 0; }
+.main-nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+.main-nav a { text-decoration: none; font-weight: 600; color: #333; }
+.auth-buttons { display: flex; align-items: center; gap: 15px; }
+.login-link { color: #6a4efc; text-decoration: none; font-weight: 500; }
+.join-btn { background-color: #6a4efc; color: #fff; padding: 8px 18px; border-radius: 6px; font-weight: 600; text-decoration: none; }
 
-    .logo img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
+/* --- Spacious Form UI Card Block --- */
+.contact-section {
+  padding: 60px 20px;
+  max-width: 680px; /* Perfectly matches your reference template scale */
+  margin: 20px auto;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-section h2 { font-size: 32px; text-align: center; margin-bottom: 5px; }
+.contact-subtitle { text-align: center; color: #666; margin-bottom: 40px; }
 
-    .logo h1 {
-      font-family: Montserrat, sans-serif;
-      font-size: 22px;
-      color: #2b2b2b;
-      font-weight: 700;
-      margin: 0;
-    }
+/* Crisp White Card Frame */
+.styled-contact-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .main-nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+.form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
 
-    .main-nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #333;
-      transition: color 0.3s ease;
-    }
+.form-field {
+  flex: 1;
+  display: flex;
+}
 
-    .main-nav a:hover {
-      color: #c49a6c;
-    }
+/* Light border input fields without visible labels */
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
 
-    .auth-buttons {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+.form-field input::placeholder,
+.form-field select:invalid,
+.form-field textarea::placeholder {
+  color: #888888;
+}
 
-    .login-link {
-      color: #6a4efc;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #888888;
+}
 
-    .join-btn {
-      background-color: #6a4efc;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-    }
+/* Flexible, mouse-expandable text window */
+.form-field textarea {
+  resize: vertical; /* Explicitly permits corner drag adjustments */
+  min-height: 120px;
+}
 
-    /* --- Contact Page Styles --- */
-    .contact-section {
-      padding: 8px 40px;
-      max-width: 800px;
-      margin: 50px auto;
-    }
+/* Custom Dropdown styling selectors */
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 35px;
+}
+.select-wrapper::after {
+  content: "➔";
+  font-size: 11px;
+  color: #555;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  pointer-events: none;
+}
 
-    .contact-section h2 {
-      font-family: Montserrat, sans-serif;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+/* Centered fine-print privacy disclaimer row */
+.form-privacy-text {
+  font-size: 13px;
+  color: #222222;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.form-privacy-text a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-    .contact-subtitle {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 30px;
-    }
+/* Action button positioning systems */
+.form-submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 40px 0;
-    }
+/* Eye-Catching Crimson Red Action Button */
+.submit-form-btn {
+  background: #E50027; /* Matches the vibrant red button */
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  width: auto;
+}
 
-    .contact-list li {
-      font-size: 18px;
-      margin-bottom: 15px;
-      display: flex;
-      gap: 10px;
-    }
+.submit-form-btn:hover {
+  background: #c20021;
+}
 
-    .contact-list strong {
-      color: #8A6E5A;
-      min-width: 100px;
-    }
+/* Responsive adjustments for handheld phones */
+@media (max-width: 550px) {
+  .form-row { flex-direction: column; gap: 20px; }
+  .styled-contact-form { padding: 20px; }
+}
 
-    .contact-list a {
-      color: #6a4efc;
-      text-decoration: none;
-      font-weight: 600;
-    }
 
-    .contact-list a:hover {
-      text-decoration: underline;
-    }
-
-    /* --- Footer Styles --- */
-    .site-footer {
-      background: #F0eae1;
-      padding: 30px 40px;
-      text-align: right;
-      border-top: 1px solid #e2dbd0;
-      margin-top: 100px;
-    }
-
-    .site-footer p { margin: 0 0 10px 0; color: #555; }
-    .site-footer a { color: #777; text-decoration: none; margin-left: 10px; }
   </style>
 
 </head>

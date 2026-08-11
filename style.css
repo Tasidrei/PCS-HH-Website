@@ -477,3 +477,129 @@ input {
   /* --- Add this line to claim available space --- */
   flex: 1; 
 }
+
+.contact-section h2 { font-size: 32px; text-align: center; margin-bottom: 5px; }
+.contact-subtitle { text-align: center; color: #666; margin-bottom: 40px; }
+
+/* Crisp White Card Frame */
+.styled-contact-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+}
+
+/* Light border input fields without visible labels */
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-field input::placeholder,
+.form-field select:invalid,
+.form-field textarea::placeholder {
+  color: #888888;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #888888;
+}
+
+/* Flexible, mouse-expandable text window */
+.form-field textarea {
+  resize: vertical; /* Explicitly permits corner drag adjustments */
+  min-height: 120px;
+}
+
+/* Custom Dropdown styling selectors */
+.select-wrapper {
+  position: relative;
+}
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 35px;
+}
+.select-wrapper::after {
+  content: "➔";
+  font-size: 11px;
+  color: #555;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  pointer-events: none;
+}
+
+/* Centered fine-print privacy disclaimer row */
+.form-privacy-text {
+  font-size: 13px;
+  color: #222222;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.form-privacy-text a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Action button positioning systems */
+.form-submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Eye-Catching Crimson Red Action Button */
+.submit-form-btn {
+  background: #E50027; /* Matches the vibrant red button */
+  color: #ffffff;
+  border: none;
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  width: auto;
+}
+
+.submit-form-btn:hover {
+  background: #c20021;
+}
+
+/* Responsive adjustments for handheld phones */
+@media (max-width: 550px) {
+  .form-row { flex-direction: column; gap: 20px; }
+  .styled-contact-form { padding: 20px; }
+}
