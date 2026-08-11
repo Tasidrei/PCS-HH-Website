@@ -168,16 +168,33 @@
   </header>
 
   <!-- Cleaned Contact Body Content Area -->
+ 
   <main class="contact-section">
-    <h2>Contact</h2>
-    <p class="contact-subtitle">Ready to book or have questions? I'd love to hear from you!</p>
-    
-    <ul class="contact-list">
-      <li><strong>Email:</strong> <a href="mailto:ha.bruns30@gmail.com">ha.bruns30@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:+491752215838">+49 175 2215838</a></li>
-      <li><strong>WhatsApp:</strong> <a href="https://wa.me" target="_blank">Chat on WhatsApp</a></li>
-    </ul>
-  </main>
+  <h2>Contact</h2>
+  <p class="contact-subtitle">Ready to book or have questions? Send a message directly below!</p>
+  
+  <!-- Modern Interactive Contact Form -->
+  <form id="contactForm" class="styled-contact-form">
+    <div class="form-row">
+      <div class="form-field">
+        <label for="contactName">Your Name</label>
+        <input type="text" id="contactName" name="user_name" placeholder="John Doe" required>
+      </div>
+      <div class="form-field">
+        <label for="contactEmail">Email Address</label>
+        <input type="email" id="contactEmail" name="user_email" placeholder="john@example.com" required>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="contactMessage">Your Message</label>
+      <textarea id="contactMessage" name="message" rows="6" placeholder="Tell me about your pet care needs..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-form-btn">Send Message</button>
+  </form>
+</main>
+
 
   <!-- Cleaned Footer Frame Structure -->
   <footer class="site-footer">
