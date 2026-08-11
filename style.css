@@ -339,3 +339,74 @@ input {
   width: 45px;   /* Adjust this value to fit your header */
   height: auto;  /* Keeps proportions correct */
 }
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: auto;
+}
+
+.logo h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  color: #2b2b2b;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #c49a6c;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-link {
+  color: #6a4efc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.join-btn {
+  background-color: #6a4efc;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #5538d0;
+}
